@@ -9,7 +9,7 @@ public class quotientRemainderTheorem {
         do{
             System.out.print("Please enter a Dividend:");
             String dividenedUnchecked = read.next();
-            if(isNumberic(dividenedUnchecked)){
+            if(inputValidation.isNumberic(dividenedUnchecked)){
                 dividend = Integer.parseInt(dividenedUnchecked);
             }else{
                 System.out.print("confirm your dividen is a integer");
@@ -18,7 +18,7 @@ public class quotientRemainderTheorem {
         do { 
             System.out.print("Please select a Divisor:");
             String divisorUnchecked = read.next();
-            if(isNumberic(divisorUnchecked)){
+            if(inputValidation.isNumberic(divisorUnchecked)){
                 divisor = Integer.parseInt(divisorUnchecked);
             }else{
                 System.out.print("confirm your divisor is non-zero");
@@ -45,12 +45,5 @@ public class quotientRemainderTheorem {
         }
         
     }
-    public static boolean isNumberic(String input){
-        for(char c : input.toCharArray()){
-            if(!(Character.isDigit(c) || (c == '-'))){
-                return false;
-            }
-        }
-        return true;
-    }
+    
 }
